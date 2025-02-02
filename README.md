@@ -1,12 +1,12 @@
 # Bootcamp - Microsoft Certification Challenge AZ204 - Realizar Deploy de uma Api no Azure DevOps.
 
-Criar uma Pipeline(CI - CD) com os conhecimentos adquiridos sobre as ferramentas do Azure.
+Criar um Pipeline(CI - CD) com os conhecimentos adquiridos sobre as ferramentas do Azure.
 
 Cenário:
--  Desenvolvedor publica no repositório do Azure DevOps
+-  Desenvolvedor publica no repositório do Azure DevOps.
 - Criar um Pipeline 
-- Entregar no ACR(Registro de Contêiner do Azure) registrar as imagens dos contêiners.
-- No ACR terá um WebHook que disparado que terá como função atualizar as versão do código, neste caso no Repósitorio d Azure Devops, mas poderia ser confurado para o GitHub ou outro com esta finalidade.
+- Entregar no ACR(Registro de Contêiner do Azure) registrar as imagens dos contêiner.
+- No ACR terá um WebHook que disparado cuja função será atualizar a versão do código, neste caso no Repósitorio d Azure Devops, mas poderia ser configurado para o GitHub ou outro com esta finalidade.
 
 ![Arquitetura](https://github.com/AdrianoProfileAdsCloud/Bootcamp-Microsoft-Certification-Challenge-AZ204-AzureDevOps/blob/main/Imagens/Arquitetura%20do%20Projeto.png))
 
