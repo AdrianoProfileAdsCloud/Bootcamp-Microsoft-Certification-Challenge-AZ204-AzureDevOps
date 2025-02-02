@@ -27,13 +27,13 @@ Cenário:
 
 ## Criar um WebApp
 
-![WebApp](https://github.com/AdrianoProfileAdsCloud/Bootcamp-Microsoft-Certification-Challenge-AZ204-AzureDevOps/blob/main/Imagens/5%20passo%20-%20Criar%20um%20WebApp.png)
+![WebApp](https://github.com/AdrianoProfileAdsCloud/Bootcamp-Microsoft-Certification-Challenge-AZ204-AzureDevOps/blob/main/Imagens/criar%20um%20webapp.png)
 
 ## Criar um Pipeline no AzureDevOps
 
-![pipeline](https://github.com/AdrianoProfileAdsCloud/Bootcamp-Microsoft-Certification-Challenge-AZ204-AzureDevOps/blob/main/Imagens/6%20passo%20-%20Criar%20um%20pipeline.png)
+![pipeline](https://github.com/AdrianoProfileAdsCloud/Bootcamp-Microsoft-Certification-Challenge-AZ204-AzureDevOps/blob/main/Imagens/criar%20um%20pipeline.png)
 
 - Este será o arquivo onde iremos descre o que o pipeline fára:
 
-![Arquivo do pipeline](https://github.com/AdrianoProfileAdsCloud/Bootcamp-Microsoft-Certification-Challenge-AZ204-AzureDevOps/blob/main/Imagens/7%20passo%20-%20Arquivo%20do%20pipeline.png)
+![Arquivo do pipeline](https://github.com/AdrianoProfileAdsCloud/Bootcamp-Microsoft-Certification-Challenge-AZ204-AzureDevOps/blob/main/Imagens/arquivo%20pipeline.png)
 
