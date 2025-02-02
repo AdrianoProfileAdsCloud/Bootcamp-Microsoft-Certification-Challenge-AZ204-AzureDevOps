@@ -1,0 +1,66 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  solution: 'AppDeployAzure/AppDeployAzure.sln' 
+  projectPath: 'AppDeployAzure' 
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  dockerRegistryServiceConnection: 'acrapiprjcloud'
+  dockerRepository: 'prj-api-cloud'
+  dockerfilePath: 'AppDeployAzure/Dockerfile.yml'
+
+steps:
+
+# ✅ Garante que o código seja baixado corretamente
+- checkout: self
+
+# ✅ Debug: Verificar se os arquivos do projeto estão no lugar correto
+- script: ls -R $(Build.SourcesDirectory)
+  displayName: '🔍 Listar todos os arquivos baixados'
+
+- script: ls -R $(Build.SourcesDirectory)/$(projectPath)
+  displayName: '🔍 Listar arquivos dentro da pasta do projeto'
+
+# ✅ Instalar .NET SDK
+- task: UseDotNet@2
+  displayName: 'Instalar .NET SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '8.x'
+
+# ✅ Restaurar pacotes antes de instalar qualquer coisa
+- script: |
+    cd $(projectPath)
+    dotnet restore
+  displayName: 'Restaurar Dependências'
+
+# ✅ Verificar se os pacotes NuGet estão corretos
+- script: |
+    dotnet nuget locals all --list
+  displayName: '🔍 Verificar pacotes NuGet'
+
+# ✅ Compilar solução
+- script: |
+    cd $(projectPath)
+    dotnet build --configuration $(buildConfiguration)
+  displayName: 'Compilar Solução'
+
+# ✅ Build e Push da Imagem Docker
+- task: Docker@2
+  displayName: 'Build e Push da Imagem Docker'
+  inputs:
+    command: 'buildAndPush'
+    repository: $(dockerRepository)
+    Dockerfile: $(dockerfilePath)
+    containerRegistry: $(dockerRegistryServiceConnection)
+ 
+

@@ -1,0 +1,6 @@
+@AppDeployAzure_HostAddress = http://localhost:5087
+
+GET {{AppDeployAzure_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
